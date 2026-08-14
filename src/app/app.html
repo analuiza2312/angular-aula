@@ -1,17 +1,11 @@
 <app-header>Minha Loja</app-header>
 
-<main style="padding: 20px;">
-  <!--controle temporários de login -->
-
-  <section style="margin-bottom: 20px;">
-    <button  (click)="login()">Login</button>
-    <button  (click)="logout()">Logout</button>
-
-  <p> Status: {{ usuarioLogado() ? 'Logado' : 'Deslogado' }}</p>
+<main class="container-principal">
+  <section class="bloco-controle">
+    <button (click)="login()">Login</button>
+    <button (click)="logout()">Logout</button>
+    <p>Status: {{ usuarioLogado() ? 'Logado' : 'Deslogado' }}</p>
   </section>
 
-  <hr />
-
-  <!-- conteúdo dinâmico das rotas -->
   <router-outlet></router-outlet>
 </main>
